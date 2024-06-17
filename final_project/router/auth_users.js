@@ -49,7 +49,7 @@ regd_users.put("/auth/review/:isbn", (req, res) => {
     res.status(400).json({ message: "Review is empty!" });
   } else {
     books[isbn].reviews[user] = review;
-    res.status(200).json({ message: "Book review updated." });
+    res.status(200).json({ message: " Book review updated." });
   }
 });
 
@@ -65,7 +65,7 @@ regd_users.delete("/auth/review/:isbn", (req, res) => {
       .json({ message: `${user} hasn't submitted a review for this book.` });
   } else {
     delete books[isbn].reviews[user];
-    res.status(200).json({ message: "Book review deleted." });
+    res.status(200).json({ message: "review deleted." });
   }
 });
 
